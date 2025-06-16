@@ -1,11 +1,18 @@
 'use client'
 
-import { Button } from "node_modules/@material-tailwind/react"
+import { Button } from "@material-tailwind/react"
+import { createBrowserSupabaseClient } from "utils/supabase/client"
 
 export default function LogoutButtone(){
+  const supabase = createBrowserSupabaseClient()
+
   return (
-    <Button color="red">
-      Log-Out
+    <Button 
+    onClick={async ()=>{
+      supabase.auth.signOut()
+    }}
+    color="red">
+      Log Out
     </Button>
   )
 }
