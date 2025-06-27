@@ -31,7 +31,7 @@ export default function Person({
       />
       <div>
         <p className="text-black font-bold text-lg">{name}</p>
-        <p className="text-gray-500">{timeAgo.format(Date.parse(onlineAt))}</p>
+        <p className="text-gray-500">{onlineAt && timeAgo.format(Date.parse(onlineAt))}</p>
       </div>
     </div>
   );
