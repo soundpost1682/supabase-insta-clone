@@ -1,12 +1,10 @@
-Need to install the following packages:
-supabase@2.26.9
-Ok to proceed? (y) 
+
 export type Json =
   | string
   | number
   | boolean
   | null
-  | { [key: string]: Json | undefined }
+  | { [key: string]: Json }
   | Json[]
 
 export type Database = {
